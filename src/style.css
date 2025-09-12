@@ -1,0 +1,240 @@
+@import "tailwindcss";
+
+@theme {
+  /* BASE HEX COLORS */
+  --color-brand-secondary-pink: #CD6D9C;
+  --color-brand-magenta: #D5367C;
+  --color-brand-purple: #4E347D;
+  --color-brand-teal: #158693;
+  --color-brand-yellow: #F8C61A;
+  --color-brand-orange: #ED7C26;
+  --color-brand-secondary-amber: #EFA02C;
+  --color-brand-secondary-black: #010101;
+  --color-brand-secondary-grey: #2C3034;
+  --color-brand-secondary-white: #FEFEFE;
+
+
+  /* Supporting & Complementaty Colors */
+  --color-mountbatten-pink: #7D6F82ff;
+  --color-cherry-blossom: #EDA8ABff;
+  --color-carrot: #F09A21ff;
+  --color-white: #FFFEFEff;
+  --color-black: #000000ff;
+  --color-royalblue: #0039a6;
+  --color-royalblue-500: #0039a6;
+  --color-royalblue-700: #092364;
+  --color-green: #3BD990;
+  --color-yellow-jonquil: #F7C61Aff;
+  --color-orange-carrot: #E59427ff;
+  --color-tekhelet: #4D347Dff;
+
+
+  --color-blossom-50: hsl(334.3 36.8% 96.3%);
+  --color-blossom-100: hsl(337.5 42.1% 92.5%);
+  --color-blossom-200: hsl(335.3 42.5% 84.3%);
+  --color-blossom-300: hsl(334 45.3% 77.1%);
+  --color-blossom-400: hsl(332.5 46.8% 69.8%);
+  --color-blossom-500: hsl(330.6 49% 61.6%);
+  --color-blossom-600: hsl(329.7 34.7% 49.2%);
+  --color-blossom-700: hsl(330 35.5% 36.5%);
+  --color-blossom-800: hsl(329.4 37.6% 24.5%);
+  --color-blossom-900: hsl(329 42.5% 14.3%);
+  --color-blossom-950: hsl(331.3 48.9% 9.2%);
+
+  --color-red-default: var('--color-brand-magenta');
+  --color-red-50: hsl(344 71.4% 95.9%);
+  --color-red-100: hsl(344.5 75.6% 92%);
+  --color-red-200: hsl(342.2 76.2% 83.5%);
+  --color-red-300: hsl(339.2 78.3% 74.7%);
+  --color-red-400: hsl(336.2 81.1% 64.7%);
+  --color-red-500: hsl(333.6 65.4% 52.4%);
+  --color-red-600: hsl(333.7 60.7% 42%);
+  --color-red-700: hsl(333.5 63.7% 31.4%);
+  --color-red-800: hsl(333.6 67.6% 21.8%);
+  --color-red-900: hsl(334.3 75.4% 12.7%);
+  --color-red-950: hsl(336 81.4% 8.4%);
+
+  --color-purple-default: var('--color-brand-purple', hsl(261.4 41.2% 34.7%));
+  --color-purple-50: hsl(255.9 44.1% 78.2%);
+  --color-purple-100: hsl(256.6 43.9% 74.1%);
+  --color-purple-200: hsl(258.7 44% 65.7%);
+  --color-purple-300: hsl(260 42.5% 57.1%);
+  --color-purple-400: hsl(261.3 39.6% 46.1%);
+  --color-purple-500: hsl(261.4 41.2% 34.7%);
+  --color-purple-600: hsl(261.9 42.9% 28.8%);
+  --color-purple-700: hsl(261.6 43.9% 22.4%);
+  --color-purple-800: hsl(261.5 47% 16.3%);
+  --color-purple-900: hsl(262 53.6% 11%);
+  --color-purple-950: hsl(259.1 61.1% 7.1%);
+
+  --color-blue-default: var('--color-brand-teal');
+  --color-blue-50: hsl(189.8 95.6% 91.2%);
+  --color-blue-100: hsl(188.6 98% 80.4%);
+  --color-blue-200: hsl(186.1 85.3% 54.7%);
+  --color-blue-300: hsl(186.2 72% 47.6%);
+  --color-blue-400: hsl(186 72.7% 40.2%);
+  --color-blue-500: hsl(186.2 75% 32.9%);
+  --color-blue-600: hsl(185.9 77.3% 25.9%);
+  --color-blue-700: hsl(186 81.6% 19.2%);
+  --color-blue-800: hsl(186.4 87.5% 12.5%);
+  --color-blue-900: hsl(187.1 94.4% 7.1%);
+  --color-blue-950: hsl(188.2 91.7% 4.7%);
+
+  --color-plum-50: hsl(291.4 36.8% 96.3%);
+  --color-plum-100: hsl(285 42.1% 92.5%);
+  --color-plum-200: hsl(287.6 42.5% 84.3%);
+  --color-plum-300: hsl(288 42.4% 76.9%);
+  --color-plum-400: hsl(289.2 42.4% 66.7%);
+  --color-plum-500: hsl(289.5 39.1% 56.9%);
+  --color-plum-600: hsl(289.7 30.7% 44.7%);
+  --color-plum-700: hsl(290 31.8% 33.3%);
+  --color-plum-800: hsl(289.2 33.9% 22.5%);
+  --color-plum-900: hsl(290.8 38.2% 13.3%);
+  --color-plum-950: hsl(287.4 46.3% 8%);
+
+  --color-yellow-default: var('--color-brand-yellow');
+  --color-yellow-50: hsl(37.5 100% 96.9%);
+  --color-yellow-100: hsl(37.1 100% 93.3%);
+  --color-yellow-200: hsl(37.7 100% 87.8%);
+  --color-yellow-300: hsl(40.4 98.2% 78.6%);
+  --color-yellow-400: hsl(43.1 98.7% 69%);
+  --color-yellow-500: hsl(46.5 94.1% 53.7%);
+  --color-yellow-600: hsl(46.8 83.1% 41.8%);
+  --color-yellow-700: hsl(46.5 86.9% 30%);
+  --color-yellow-800: hsl(46.3 92% 19.6%);
+  --color-yellow-900: hsl(44.4 96.2% 10.2%);
+  --color-yellow-950: hsl(42.6 100% 6.1%);
+
+  --color-orange-default: var('--color-brand-orange');
+  --color-orange-50: hsl(14.1 89.5% 96.3%);
+  --color-orange-100: hsl(13.5 93.9% 93.5%);
+  --color-orange-200: hsl(15.7 94.2% 86.5%);
+  --color-orange-300: hsl(17.6 94.8% 77.5%);
+  --color-orange-400: hsl(21.2 95.3% 66.9%);
+  --color-orange-500: hsl(25.9 84.7% 53.9%);
+  --color-orange-600: hsl(25.9 74.1% 42.4%);
+  --color-orange-700: hsl(26.1 77.2% 31%);
+  --color-orange-800: hsl(26.3 83.2% 21%);
+  --color-orange-900: hsl(24.4 90% 11.8%);
+  --color-orange-950: hsl(20.6 94.6% 7.3%);
+
+
+  --color-amber-50: hsl(21.2 100% 96.7%);
+  --color-amber-100: hsl(23.4 100% 92%);
+  --color-amber-200: hsl(25.5 100% 84.3%);
+  --color-amber-300: hsl(29.4 100% 72.7%);
+  --color-amber-400: hsl(38.3 100% 48.8%);
+  --color-amber-500: hsl(38.3 100% 44.5%);
+  --color-amber-600: hsl(38 100% 39.6%);
+  --color-amber-700: hsl(37.9 100% 35.1%);
+  --color-amber-800: hsl(37.2 100% 23.7%);
+  --color-amber-900: hsl(35.1 100% 12.7%);
+  --color-amber-950: hsl(31.5 100% 7.8%);
+
+  --color-pink-50: hsl(334.3 36.8% 96.3%);
+  --color-pink-100: hsl(337.5 42.1% 92.5%);
+  --color-pink-200: hsl(335.3 42.5% 84.3%);
+  --color-pink-300: hsl(334 45.3% 77.1%);
+  --color-pink-400: hsl(332.5 46.8% 69.8%);
+  --color-pink-500: hsl(330.6 49% 61.6%);
+  --color-pink-600: hsl(329.7 34.7% 49.2%);
+  --color-pink-700: hsl(330 35.5% 36.5%);
+  --color-pink-800: hsl(329.4 37.6% 24.5%);
+  --color-pink-900: hsl(329 42.5% 14.3%);
+  --color-pink-950: hsl(331.3 48.9% 9.2%);
+
+  --color-violet-50: hsl(280 11.1% 94.7%);
+  --color-violet-100: hsl(280 12.5% 90.6%);
+  --color-violet-200: hsl(285 12.5% 81.2%);
+  --color-violet-300: hsl(286.7 12.2% 71%);
+  --color-violet-400: hsl(285 12.5% 62.4%);
+  --color-violet-500: hsl(287.1 11.5% 52.2%);
+  --color-violet-600: hsl(284.3 11% 41%);
+  --color-violet-700: hsl(285.9 10.7% 31.2%);
+  --color-violet-800: hsl(286.2 12.1% 21%);
+  --color-violet-900: hsl(286.7 14.3% 12.4%);
+  --color-violet-950: hsl(290 16.7% 7.1%);
+
+  --font-fancy: 'Nothing You Could Do', cursive;
+
+}
+
+body,
+html {
+  font-family: "Lato", sans-serif;
+  scroll-behavior: smooth !important;
+}
+
+.gradiant-articles {
+  background-color: #ffffff;
+  background-image: radial-gradient(#db80ff 0.5px, transparent 0.5px), radial-gradient(#db80ff 0.5px, #ffffff 0.5px);
+  background-size: 20px 20px;
+  background-position: 0 0, 10px 10px;
+}
+
+.video-block:hover button {
+  color: rgb(168, 85, 247);
+}
+
+.scroll {
+  position: relative;
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+  mask-image: linear-gradient(90deg, transparent, #fff 20%, #fff 80%, transparent);
+  -webkit-mask-image: linear-gradient(90deg, transparent, #fff 20%, #fff 80%, transparent);
+}
+
+.scroll div {
+  white-space: nowrap;
+  animation: scroll var(--time) linear infinite;
+  animation-delay: calc(var(--time)*-1);
+
+}
+
+.scroll div:nth-child(2) {
+  animation: scroll2 var(--time) linear infinite;
+  animation-delay: calc(var(--time)/-2);
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes scroll2 {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-200%);
+  }
+}
+
+.scroll div span {
+  display: inline-flex;
+  margin: 10px;
+  letter-spacing: 0.2em;
+  background: #333;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: 0.5s;
+}
+
+.imgBox div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imgBox img {
+  max-width: 100px;
+  scale: 0.8;
+}
