@@ -1,6 +1,6 @@
+import { resolve } from 'path';
 import { defineConfig} from "vite";
 import tailwindcss from "@tailwindcss/vite";
-import { resolve } from 'path';
 
 
 
@@ -14,6 +14,6 @@ export default defineConfig({
                 main: resolve(__dirname, 'index.html'),
             },
         },
-    },
+    }
 });
 

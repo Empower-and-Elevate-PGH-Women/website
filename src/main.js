@@ -4,7 +4,7 @@ var app = document.getElementById('typing');
 const useString = app.innerHTML
 
 var typewriter = new Typewriter(app, {
-    loop: true
+    loop: false
 });
 
 typewriter.typeString(useString)
